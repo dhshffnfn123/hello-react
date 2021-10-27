@@ -1,23 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'; // react를 불러와서 사용할 수 있게 해줌
 
-function App() {
+function App() { // app 이라는 컴포넌트를 만들어줌 JSX라고 부름
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello React</h1>
+      <h2>is good? How are you?</h2>
     </div>
   );
 }
