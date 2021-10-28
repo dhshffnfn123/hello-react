@@ -22,3 +22,25 @@ MyComponent.propTypes = {
 };
 
 export default MyComponent;
+
+/*  클래스형 컴포넌트에서 defaultProps와 propTypes를 설정할 때 class 내부에서 지정하는 방법
+import React, { Component } from 'react';
+import PropsTypes from 'prop-types';
+
+class MyComponent extends Component {
+    static defaultProps = {
+        name: '기본이름'
+    };
+    static propTypes = {
+        name: PropTypes.string,
+        favoriteNumber: PropTypes.number.isRequired
+    };
+    render() {
+        const { name, favoriteNumber, children } = this.props; // 비구조화 할당
+        return (...);
+    }
+}
+
+
+
+*/

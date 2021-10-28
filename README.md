@@ -27,3 +27,8 @@
 > - 객체에서 값을 추출하는 문법을 비구조화 할당이라고 한다. (MyComponent.js 참고)
 > * Prop는 PropTypes를 설정할 수 있다.
 >   * (array, arrayOf, bool, func, number, object, string, symbol, node. instanceOf, oneOf, shape, any...)
+
+## State
+> + 클래스형 컴포넌트의 state와 함수형 컴포넌트의 state로 나뉜다.
+> - 컴포넌트에 state를 설정할 때는 constructor 메서드를 작성하여 설정한다.
+> * state 객체 안에는 여러 값이 있을 수 있다.
