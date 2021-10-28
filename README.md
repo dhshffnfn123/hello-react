@@ -22,3 +22,8 @@
 ## 컴포넌트
 > + 컴포넌트는 함수형과 클래스형으로 나뉜다
 
+## props
+> + props는 properties를 줄인 표현으로 컴포넌트 속성을 설정할때 사용하는 요소이다.
+> - 객체에서 값을 추출하는 문법을 비구조화 할당이라고 한다. (MyComponent.js 참고)
+> * Prop는 PropTypes를 설정할 수 있다.
+>   * (array, arrayOf, bool, func, number, object, string, symbol, node. instanceOf, oneOf, shape, any...)
