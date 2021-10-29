@@ -32,3 +32,4 @@
 > + 클래스형 컴포넌트의 state와 함수형 컴포넌트의 state로 나뉜다.
 > - 컴포넌트에 state를 설정할 때는 constructor 메서드를 작성하여 설정한다.
 > * state 객체 안에는 여러 값이 있을 수 있다.
+> + state값을 바꾸어야 할 때는 setState혹은 useState를 통해 전달받은 세터함수를 사용해야 한다.
