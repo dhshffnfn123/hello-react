@@ -65,6 +65,7 @@ class LifeCycleSample extends Component {
 
         return (
             <div>
+                {this.props.missing.value}
                 <h1 style={style} ref={ref => this.myRef=ref}>{this.state.number}</h1>
                 <p>color : {this.state.color}</p>
                 <button onClick={this.handleClick}>더하기</button>
@@ -84,6 +85,6 @@ export default LifeCycleSample;
  - getSnapshotBeforeUpdate는 DOM에 변화가 일어나기 직전의 색상 속성을 snapshot 값으로 반환
  - getSnapshotBeforeUpdate에서 반환한 값을 componentDidUpdate에서 조회
  - shouldComponentUpdate 메서드에서 state.number 값의 마지막 자리 수가 4이면 리렌더링을 취소
- 
+
 
 */
