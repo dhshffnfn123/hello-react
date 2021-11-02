@@ -42,3 +42,11 @@
 ## DOM_ref
 > + DOM을 직접적으로 건드려야 할 때 주로 사용한다.
 > - DOM은 특정 input에 포커스를 주거나 스크롤박스 조작, Canvas 요소에 그림을 그릴 때 사용해야 한다.
+
+## map()
+> + arr.map(callback, [this.arg])
+>   + callback : 새로운 배열의 요소를 생성하는 함수
+>       + currentValue : 현재 처리하고 있는 요소
+>       + index : 현재 처리하고 있는 요소의 index 값
+>       + array : 현재 처리하고 있는 원본 배열
+>   + thisArg(선택항목) : callback 함수 내부에서 사용할 this 레퍼런스
