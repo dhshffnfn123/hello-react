@@ -44,9 +44,52 @@
 > - DOM은 특정 input에 포커스를 주거나 스크롤박스 조작, Canvas 요소에 그림을 그릴 때 사용해야 한다.
 
 ## map()
-> + arr.map(callback, [this.arg])
+> + 🛠 arr.map(callback, [this.arg])
 >   + callback : 새로운 배열의 요소를 생성하는 함수
 >       + currentValue : 현재 처리하고 있는 요소
 >       + index : 현재 처리하고 있는 요소의 index 값
 >       + array : 현재 처리하고 있는 원본 배열
 >   + thisArg(선택항목) : callback 함수 내부에서 사용할 this 레퍼런스
+
+## Key
+> + 어떤 원소에 변동이 있었는지 알아내려고 사용한다.
+> - key 값을 설정할 때는 map 함수의 인자로 전달되는 함수 내부에서 컴포넌트 props를 설정하듯이 설정한다.
+> * key 값은 언제나 유일해야 한다.
+
+## filter
+> - 🛠 const numbers = [1, 2, 3, 4, 5, 6];
+>   - const biggerThanThree = numbers.filter(number => number > 3);
+> + 배열에서 특정 조건을 만족하는 원소들만 쉽게 분류할 수 있다.
+
+## LifeCycle
+> + 라이프사이클 메서드의 종류는 총 9가지이다.
+> - Will 접두사가 붙은 메서드는 어떤 작업을 작동하기 전에 실행되는 메서드이고, 
+> + Did 접두사가 붙은 메서드는 어떤 작업을 작동한 후에 실행되는 메서드이다.
+> - 라이프 사이클은 총 세가지, 즉 마운트, 업데이트, 언마운트 카테고리로 나눈다.
+
+## Mount
+> + DOM이 생성되고 웹 브라우저상에 나타나는 것을 마운트라고 한다. 이 때 호출하는 메서드는 다음과 같다
+>   + constructor : 컴포넌트를 새로 만들 때마다 호출되는 클래스 생성자 메서드입니다.
+>   + getDerivedStateFromProps : props에 있는 값을 state에 넣을 때 사용하는 메서드입니다.
+>   + render : 우리가 준비한 UI를 렌더링하는 메서드입니다.
+>   + componentDidMount : 컴포넌트가 웹 브라우저상에 나타난 후 호출하는 메서드 입니다.
+
+## Update
+> + 컴포넌트는 다음과 같은 총 네 가지 경우에 업데이트합니다.
+>   + props가 바뀔 때
+>   + state가 바뀔 때
+>   + 부모 컴포넌트가 리렌더링 될 때
+>   + this.forceUpdate로 강제로 렌더링을 트리거할 때
+> - 업데이트를 발생시키는 요인 -> getDerivedStateFromProps -> shouldComponentUpdate(true반환 시 render 호출, false 반환 시 여기서 작업 취소)
+>   - getDerivedStateFromProps : 이 메서드는 마운트 과정에서도 호출되며, 업데이트가 시작하기 전에도 호출된다. 
+>       - props의 변화에 따라 state 값에도 변화를 주고 싶을 때 사용
+>   - shouldComponentUpdate : 컴포넌트가 리렌더링을 할지 말지 결정하는 메서드이며 true 혹은 false 값을 반환해야 한다. false를 반환하면 작업을 중지
+>       - 만약 특정 함수에서 this.forceUpdate() 함수를 호출하면 이 과정을 생략하고 render 함수를 호출한다.
+>   - render : 컴포넌트를 리렌더링
+>   - getSnapshotBeforeUpdate : 컴포넌트 변화를 DOM에 반영하기 바로 직전에 호출하는 메서드
+>   - componentDidUpdate : 컴포넌트의 업데이트 작업이 끝난 후 호출하는 메서드
+
+## Unmount
+> + 마운트의 반대과정, 즉 컴포넌트를 DOM에서 제거하는 것을 언마운트라고 한다.
+>   + 언마운트하기 -> componentWillUnmount
+>       + componentWillUnmount : 컴포넌트가 웹 브라우저상에서 사라지기 전에 호출하는 메서드
