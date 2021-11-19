@@ -1,4 +1,4 @@
-# 🌐React
+# ⚛ React
 
 
 ##### Node.js 및 yarn, VS CODE를 사용
